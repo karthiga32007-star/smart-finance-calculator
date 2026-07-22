@@ -1,0 +1,653 @@
+/* ================================
+   SMART FINANCE CALCULATOR
+   MODERN DASHBOARD DESIGN
+================================ */
+
+.finance-app {
+  min-height: 100vh;
+  display: flex;
+  background: #f5f7fc;
+}
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  padding: 28px 20px;
+  color: white;
+  background:
+    linear-gradient(180deg, #071a52 0%, #122b78 45%, #5324a7 100%);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 10px 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #10d878, #3c7cff);
+  box-shadow: 0 5px 20px rgba(45, 211, 145, 0.35);
+}
+
+.brand h2 {
+  margin: 0;
+  color: white;
+  font-size: 20px;
+}
+
+.brand h2 span {
+  color: #19d88a;
+}
+
+.brand p {
+  margin: 3px 0 0;
+  font-size: 9px;
+  letter-spacing: 4px;
+  opacity: 0.7;
+}
+
+.sidebar nav {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar nav a {
+  padding: 14px 16px;
+  border-radius: 12px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: rgba(255,255,255,0.1);
+  color: #20e39a;
+  box-shadow: inset 3px 0 #20e39a;
+}
+
+.sidebar nav a:first-letter {
+  font-size: 20px;
+}
+
+.quote {
+  margin-top: auto;
+  padding: 20px 10px;
+}
+
+.quote-mark {
+  font-size: 55px;
+  color: #19d88a;
+  line-height: 30px;
+}
+
+.quote p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.8);
+}
+
+.quote strong {
+  color: #19d88a;
+  font-size: 12px;
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.main-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 35px 45px;
+  max-width: 1500px;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.top-header h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #142b69, #6332c9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.top-header p {
+  margin: 8px 0 0;
+  color: #6d7690;
+  font-size: 15px;
+}
+
+.date-badge {
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: white;
+  color: #5c32c9;
+  font-weight: 700;
+  box-shadow: 0 5px 20px rgba(40, 50, 100, 0.08);
+}
+
+/* ================================
+   SUMMARY CARDS
+================================ */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 25px;
+}
+
+.summary-card {
+  position: relative;
+  padding: 25px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow: 0 8px 25px rgba(40,50,100,0.06);
+}
+
+.summary-card::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 70px;
+  border-radius: 50%;
+  right: -30px;
+  bottom: -35px;
+  opacity: 0.2;
+}
+
+.income-card {
+  background: linear-gradient(135deg, #f0fff7, #e4faef);
+}
+
+.expense-card {
+  background: linear-gradient(135deg, #fff4f5, #ffecef);
+}
+
+.saving-card {
+  background: linear-gradient(135deg, #f0f6ff, #e8f0ff);
+}
+
+.card-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 27px;
+  background: rgba(255,255,255,0.75);
+}
+
+.summary-card p {
+  margin: 0;
+  color: #58627a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.summary-card h2 {
+  margin: 5px 0;
+  font-size: 25px;
+  color: #172554;
+}
+
+.summary-card span {
+  font-size: 12px;
+  color: #7d8498;
+}
+
+.card-arrow {
+  margin-left: auto;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.income-card h2,
+.income-card .card-arrow {
+  color: #079669;
+}
+
+.expense-card h2,
+.expense-card .card-arrow {
+  color: #ed3152;
+}
+
+.saving-card h2,
+.saving-card .card-arrow {
+  color: #2468dc;
+}
+
+/* ================================
+   MAIN PANELS
+================================ */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 25px;
+}
+
+.panel {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(40,50,100,0.06);
+  border: 1px solid #edf0f7;
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.panel-title h2 {
+  margin: 0;
+  color: #4123a7;
+  font-size: 21px;
+}
+
+.title-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+.purple {
+  color: #6233d1;
+  background: #f0eaff;
+}
+
+/* ================================
+   FORM
+================================ */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: #172554;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 14px;
+  border: 1.5px solid #dce1ec;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.input-wrapper:focus-within {
+  border-color: #6332d1;
+  box-shadow: 0 0 0 4px rgba(99,50,209,0.08);
+}
+
+.input-wrapper span {
+  font-size: 20px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 13px 5px;
+  font-size: 15px;
+  background: transparent;
+  color: #172554;
+}
+
+.calculate-btn {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-radius: 11px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #6128d7, #315fe8);
+  box-shadow: 0 8px 20px rgba(83,45,210,0.25);
+  transition: 0.3s;
+}
+
+.calculate-btn span {
+  float: right;
+  font-size: 20px;
+}
+
+.calculate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(83,45,210,0.35);
+}
+
+.secure-note {
+  text-align: center;
+  margin-top: 18px;
+  color: #7b8498;
+  font-size: 12px;
+}
+
+/* ================================
+   FINANCIAL SUMMARY
+================================ */
+
+.summary-content {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin: 10px 0 25px;
+}
+
+.donut {
+  width: 170px;
+  height: 170px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(
+    #21c56b var(--progress),
+    #ff4d6d var(--progress) 100%
+  );
+}
+
+.donut::before {
+  content: "";
+  position: absolute;
+}
+
+.donut-center {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.donut-center strong {
+  font-size: 24px;
+  color: #19a65c;
+}
+
+.donut-center span {
+  font-size: 11px;
+  color: #687188;
+  margin-top: 5px;
+}
+
+.financial-values {
+  flex: 1;
+}
+
+.value-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 14px;
+}
+
+.value-row strong {
+  font-size: 16px;
+}
+
+.green {
+  color: #099c62;
+}
+
+.red {
+  color: #ed3152;
+}
+
+.blue {
+  color: #2468dc;
+}
+
+.empty-summary {
+  text-align: center;
+  padding: 30px;
+  color: #7b8498;
+}
+
+.empty-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.empty-summary h3 {
+  color: #172554;
+  margin: 10px 0;
+}
+
+.empty-summary p {
+  font-size: 13px;
+}
+
+.status-message {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.status-message.success {
+  background: #edfff5;
+  border: 1px solid #c5f2d8;
+}
+
+.status-message.danger {
+  background: #fff1f2;
+  border: 1px solid #ffd0d5;
+}
+
+.status-icon {
+  font-size: 30px;
+}
+
+.status-message strong {
+  color: #172554;
+}
+
+.status-message p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #657087;
+}
+
+/* ================================
+   TIPS
+================================ */
+
+.tips-section {
+  background: white;
+  margin-top: 25px;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(40,50,100,0.06);
+}
+
+.tips-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.tips-heading span {
+  font-size: 25px;
+}
+
+.tips-heading h2 {
+  margin: 0;
+  color: #542ac0;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.tip-card {
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid;
+}
+
+.tip-icon {
+  font-size: 28px;
+}
+
+.tip-card h3 {
+  margin: 12px 0 8px;
+  font-size: 16px;
+}
+
+.tip-card p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #657087;
+}
+
+.green-tip {
+  background: #f1fff7;
+  border-color: #c9f1dc;
+}
+
+.blue-tip {
+  background: #f1f6ff;
+  border-color: #d0e0ff;
+}
+
+.orange-tip {
+  background: #fff9ed;
+  border-color: #ffe4ad;
+}
+
+.purple-tip {
+  background: #f8f3ff;
+  border-color: #e3d4ff;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #8991a5;
+  font-size: 12px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+  .sidebar {
+    width: 210px;
+  }
+
+  .main-content {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+    padding: 25px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .top-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .top-header h1 {
+    font-size: 28px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-content {
+    flex-direction: column;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}
