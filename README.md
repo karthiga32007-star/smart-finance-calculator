@@ -28,3 +28,16 @@ This branch contains the finance calculator project setup and calculation functi
 - CSS
 - Git
 - GitHub
+
+## Dashboard Branch
+
+This branch contains the dashboard documentation for the Smart Finance Calculator project.
+
+## Dashboard Features
+
+- Financial summary
+- Income and expense overview
+- Savings analysis
+- Savings percentage
+- Smart finance tips
+- User-friendly dashboard interface
